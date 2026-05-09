@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 jobs:
   test:
-    run-on: unbutu-latest
+    runs-on: unbutu-latest
     steps:
       - name: Recuperer le code
         uses: actions/checkout@v3
