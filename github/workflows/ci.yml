@@ -1,0 +1,22 @@
+name: CI pipline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  test:
+    run-on: unbutu-latest
+    steps:
+      - name: Recuperer le code
+        uses: actions/checkout@v3
+
+      - name: installer python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: lancer les test
+        run: pytest test_app.py -v
+
