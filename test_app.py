@@ -8,4 +8,4 @@ def test_home():
 def test_addition():
    client =app.test_client()
    response =client.get('/addition/2/3')
-   assert response.data == b'5'
+   assert response.data == b'10'
