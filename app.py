@@ -5,7 +5,7 @@ app= Flask(__name__)
 @app.route('/')
 
 def home():
-    return "CI/CD avec Github Action !"
+    return "mon pipeline CI/CD fonctionne automatiquement !"
 
 @app.route('/addition/<int:a>/<int:b>')
 
